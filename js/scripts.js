@@ -16,10 +16,13 @@ function handleCalculation(event) {
   const Side3 = parseInt(document.querySelector("input#Side3").value)
 
   let result;
-  if (Side1 === Side2 === Side3) {
+  if (Side1 === Side2 && Side2 === Side3) {
     document.getElementById("Equilateral").removeAttribute("class");
     result = "Equilateral";
-  } else if (Side1 === Side2 || Side2 === Side3 || Side1 === Side3)
+  } else if (Side1 === Side2 && Side2 != Side3 && Side1 != Side3) {
+    document.getElementById("Isosceles").removeAttribute("class");
+    result = "Isosceles";
+  }
 
 
 
